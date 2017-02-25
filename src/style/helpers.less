@@ -1,0 +1,143 @@
+
+@phone: ~"only screen and (min-width: 768px)";
+@tablet: ~"only screen and (min-width: 992px)";
+@desktop: ~"only screen and (min-width: 1200px)";
+
+
+// Wyrownanie, pozycjowanie
+.center-text {
+	text-align: center;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+.center-no-float {
+	.float-none;
+	.center-text;
+}
+
+.no-center-float {
+	.float-left;
+	text-align: initial;
+}
+
+// wyrowanie w pionie
+.center-vertical {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Widocznosc
+.invisible {
+	display: none;
+}
+
+.inline-block {
+	display: inline-block;
+} 
+
+.block {
+	display: block;
+}
+
+// rozmiary
+.absolute-one-hundred-size {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.size(@width;@height) {
+	width: @width;
+	height: @height;
+}
+
+// Listy
+.list-style-none {
+	list-style-type: none;
+}
+
+// Ramki
+.section-border-top(@border-color: @basic-border-color) {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: @border-color;
+}
+
+.section-border-bottom(@border-color: @basic-border-color) {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: @border-color;
+}
+
+// Elementy plywajace
+.overflow-fix  {
+	overflow: auto;
+}
+
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// ukrywanie
+.hide {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+}
+
+// narozniki
+.border-radius-single(@radius) {
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+// podstawowe przejscie 0.2s
+.basic-transition {
+	transition: all 0.2s ease-in-out;
+}
+
+// Zmienne przjscie
+.variable-transition(@length) {
+	transition: all @length ease-in-out;
+}
+
+// Translate 3D
+.translate3d(@move-x;@move-y;@move-z) {
+	transform: translateX(@move-x);
+	transform: translateY(@move-y);
+	transform: translateZ(@move-z);
+}
+
+//Nakladka
+.dark-overlay {
+	content: "";
+	z-index: 0;
+	.absolute-one-hundred-size;
+	background: none repeat 0 0 rgba(30, 30, 30, 0.5);
+}
+
+
+
+
+
